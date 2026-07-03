@@ -46,6 +46,12 @@ function Navbar() {
               Home
             </Link>
             <Link 
+              to="/upcoming" 
+              className="text-purple-200 hover:text-white relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-red-500 hover:after:w-full after:transition-all after:duration-300 py-1"
+            >
+              Upcoming
+            </Link>
+            <Link 
               to="/watchlist" 
               className="text-purple-200 hover:text-white relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-red-500 hover:after:w-full after:transition-all after:duration-300 py-1"
             >
@@ -78,7 +84,7 @@ function Navbar() {
         </div>
       </nav>
 
-      <div className={`md:hidden overflow-hidden transition-all duration-300 max-h-0 ${isOpen ? "max-h-60 mt-4 border-t border-purple-800/50 pt-4" : ""}`}>
+      <div className={`md:hidden overflow-hidden transition-all duration-300 max-h-0 ${isOpen ? "max-h-64 mt-4 border-t border-purple-800/50 pt-4" : ""}`}>
         <div className="flex flex-col gap-4 font-medium">
           <form onSubmit={handleSearchSubmit} className="relative sm:hidden block w-full">
          <input
@@ -96,6 +102,13 @@ function Navbar() {
             className="text-purple-200 hover:text-white p-2 hover:bg-purple-800/50 rounded-md transition-colors"
           >
             Home
+          </Link>
+          <Link 
+            to="/upcoming" 
+            onClick={() => setIsOpen(false)} 
+            className="text-purple-200 hover:text-white p-2 hover:bg-purple-800/50 rounded-md transition-colors"
+          >
+            Upcoming
           </Link>
           <Link 
             to="/watchlist" 

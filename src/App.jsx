@@ -4,6 +4,7 @@ import Home from "./pages/Home"
 import AnimeDetails from "./pages/AnimeDetails"
 import Footer from "./components/Footer"
 import WatchList from "./pages/WatchList"
+import UpcomingAnime from "./pages/UpcomingAnime"
 function App() {
  
 
@@ -15,6 +16,7 @@ function App() {
     <Route path="/anime/:id" element={<AnimeDetails/>}/>
     <Route path="/Search/:query" element={<Home/>}/>
     <Route path="/watchlist" element={<WatchList/>}/>
+    <Route path="/upcoming" element={<UpcomingAnime/>} />
   </Routes>
   <Footer/>
 </BrowserRouter>
